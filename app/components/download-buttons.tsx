@@ -11,7 +11,7 @@ interface DownloadButtonProps {
 
 function DownloadButton({ children, href, onClick, disabled = false }: DownloadButtonProps) {
   const baseClasses =
-    "flex items-center justify-center gap-3 font-semibold py-3 px-6 rounded-full min-w-[160px] shadow-lg transition-all duration-200 backdrop-blur-sm border"
+    "flex items-center justify-center gap-2 sm:gap-3 font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-full min-w-[120px] sm:min-w-[160px] shadow-lg transition-all duration-200 backdrop-blur-sm border text-sm sm:text-base"
   const enabledClasses =
     "bg-black/80 hover:bg-black/90 border-gray-600 text-white hover:shadow-xl transform hover:scale-105"
   const disabledClasses = "bg-white/10 border-white/20 text-gray-300 cursor-not-allowed"
@@ -44,7 +44,7 @@ export function DownloadButtons() {
         <img
           src="/appstore-icon.png"
           alt="App Store"
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
           onError={(e) => {
             console.log("[v0] App Store icon failed to load:", e.currentTarget.src)
             e.currentTarget.style.display = "none"
@@ -60,7 +60,7 @@ export function DownloadButtons() {
         <img
           src="/googleplay-icon.png"
           alt="Google Play"
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
           onError={(e) => {
             console.log("[v0] Google Play icon failed to load:", e.currentTarget.src)
             e.currentTarget.style.display = "none"
@@ -76,7 +76,7 @@ export function DownloadButtons() {
         <img
           src="/android-icon.png"
           alt="Android APK"
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
           onError={(e) => {
             console.log("[v0] Android icon failed to load:", e.currentTarget.src)
             e.currentTarget.style.display = "none"

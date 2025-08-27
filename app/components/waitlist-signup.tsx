@@ -49,8 +49,8 @@ export function WaitlistSignup() {
               </div>
               
               {/* Desktop layout: 一行显示 */}
-              <div className="hidden sm:block">
-                <span className="animate-blur-in overflow-visible fix-text-clip whitespace-nowrap" style={{
+              <div className="hidden sm:block whitespace-nowrap">
+                <span className="animate-blur-in overflow-visible fix-text-clip" style={{
                   background: 'linear-gradient(to bottom right, #e5e7eb, #9ca3af)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -64,8 +64,8 @@ export function WaitlistSignup() {
                   }}>
                     Social
                   </span>
-                  <span className="text-white animate-blur-in-delayed ml-2">🚀</span>
                 </span>
+                <span className="text-white animate-blur-in-delayed ml-2">🚀</span>
               </div>
             </h2>
           </div>
