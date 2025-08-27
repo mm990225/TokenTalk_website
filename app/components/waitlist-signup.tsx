@@ -26,7 +26,30 @@ export function WaitlistSignup() {
         <div className="flex-1 flex flex-col justify-center items-center text-center">
           <div className="overflow-visible py-0 mt-16 sm:mt-24 px-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-0 leading-tight fix-text-clip">
-              <span className="inline-block animate-blur-in overflow-visible fix-text-clip" style={{
+              {/* Mobile layout: 两行显示 */}
+              <div className="block sm:hidden">
+                <div className="animate-blur-in overflow-visible fix-text-clip" style={{
+                  background: 'linear-gradient(to bottom right, #e5e7eb, #9ca3af)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}>
+                  Redefining Web3
+                </div>
+                <div className="flex items-center justify-center gap-2 mt-1">
+                  <span style={{ 
+                    color: "#0077FF",
+                    WebkitTextFillColor: "#0077FF",
+                    background: 'none'
+                  }} className="animate-blur-in">
+                    Social
+                  </span>
+                  <span className="text-white animate-blur-in-delayed">🚀</span>
+                </div>
+              </div>
+              
+              {/* Desktop layout: 一行显示 */}
+              <span className="hidden sm:inline-block animate-blur-in overflow-visible fix-text-clip" style={{
                 background: 'linear-gradient(to bottom right, #e5e7eb, #9ca3af)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -41,7 +64,7 @@ export function WaitlistSignup() {
                   Social
                 </span>
               </span>
-              <span className="text-white animate-blur-in-delayed ml-2">🚀</span>
+              <span className="hidden sm:inline text-white animate-blur-in-delayed ml-2">🚀</span>
             </h2>
           </div>
           <div className="mt-1.5 px-4">
