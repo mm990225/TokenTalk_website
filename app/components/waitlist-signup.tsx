@@ -49,22 +49,24 @@ export function WaitlistSignup() {
               </div>
               
               {/* Desktop layout: 一行显示 */}
-              <span className="hidden sm:inline-block animate-blur-in overflow-visible fix-text-clip" style={{
-                background: 'linear-gradient(to bottom right, #e5e7eb, #9ca3af)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}>
-                Redefining Web3{" "}
-                <span style={{ 
-                  color: "#0077FF",
-                  WebkitTextFillColor: "#0077FF",
-                  background: 'none'
+              <div className="hidden sm:block">
+                <span className="animate-blur-in overflow-visible fix-text-clip whitespace-nowrap" style={{
+                  background: 'linear-gradient(to bottom right, #e5e7eb, #9ca3af)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
                 }}>
-                  Social
+                  Redefining Web3{" "}
+                  <span style={{ 
+                    color: "#0077FF",
+                    WebkitTextFillColor: "#0077FF",
+                    background: 'none'
+                  }}>
+                    Social
+                  </span>
+                  <span className="text-white animate-blur-in-delayed ml-2">🚀</span>
                 </span>
-              </span>
-              <span className="hidden sm:inline text-white animate-blur-in-delayed ml-2">🚀</span>
+              </div>
             </h2>
           </div>
           <div className="mt-1.5 px-4">
