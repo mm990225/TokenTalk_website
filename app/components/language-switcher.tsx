@@ -7,10 +7,10 @@ export function LanguageSwitcher() {
 
   return (
     <div className="fixed top-4 right-4 sm:top-8 sm:right-8 z-50">
-      <div className="flex items-center gap-1 bg-black/20 backdrop-blur-sm rounded-full p-1 border border-white/10">
+      <div className="flex items-center gap-0.5 sm:gap-1 bg-black/20 backdrop-blur-sm rounded-full p-0.5 sm:p-1 border border-white/10 h-8 sm:h-auto">
         <button
           onClick={() => setLanguage('en')}
-          className={`px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
+          className={`px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 ${
             language === 'en'
               ? 'bg-white text-black shadow-sm'
               : 'text-white/70 hover:text-white hover:bg-white/10'
@@ -20,7 +20,7 @@ export function LanguageSwitcher() {
         </button>
         <button
           onClick={() => setLanguage('cn')}
-          className={`px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
+          className={`px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 ${
             language === 'cn'
               ? 'bg-white text-black shadow-sm'
               : 'text-white/70 hover:text-white hover:bg-white/10'
