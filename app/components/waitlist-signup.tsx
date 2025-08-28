@@ -3,8 +3,12 @@
 import { XIcon } from "./icons/x-icon"
 import { SocialIcon } from "./social-icon"
 import { DownloadButtons } from "./download-buttons"
+import { LanguageSwitcher } from "./language-switcher"
+import { useLanguage } from "../contexts/language-context"
 
 export function WaitlistSignup() {
+  const { t } = useLanguage()
+  
   return (
     <>
       <div className="fixed top-4 left-4 sm:top-8 sm:left-8 flex items-center gap-2 sm:gap-4 z-50">
@@ -19,8 +23,10 @@ export function WaitlistSignup() {
             console.log("[v0] Logo loaded successfully")
           }}
         />
-        <span className="text-white font-medium text-base sm:text-xl">TokenTalk</span>
+        <span className="text-white font-medium text-base sm:text-xl">{t('header.title')}</span>
       </div>
+
+      <LanguageSwitcher />
 
       <div className="relative w-full max-w-xl mx-auto p-4 sm:p-8 flex flex-col justify-between min-h-screen">
         <div className="flex-1 flex flex-col justify-center items-center text-center">
@@ -34,7 +40,7 @@ export function WaitlistSignup() {
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
                 }}>
-                  Redefining Web3
+                  {t('main.redefining')}
                 </div>
                 <div className="flex items-center justify-center gap-2 mt-1">
                   <span style={{ 
@@ -42,7 +48,7 @@ export function WaitlistSignup() {
                     WebkitTextFillColor: "#0077FF",
                     background: 'none'
                   }} className="animate-blur-in">
-                    Social
+                    {t('main.social')}
                   </span>
                   <span className="text-white animate-blur-in-delayed">🚀</span>
                 </div>
@@ -56,13 +62,13 @@ export function WaitlistSignup() {
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
                 }}>
-                  Redefining Web3{" "}
+                  {t('main.redefining')}{" "}
                   <span style={{ 
                     color: "#0077FF",
                     WebkitTextFillColor: "#0077FF",
                     background: 'none'
                   }}>
-                    Social
+                    {t('main.social')}
                   </span>
                 </span>
                 <span className="text-white animate-blur-in-delayed ml-2">🚀</span>
@@ -70,7 +76,7 @@ export function WaitlistSignup() {
             </h2>
           </div>
           <div className="mt-1.5 px-4">
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-300 animate-blur-in-subtitle">Social + Wallet, Endless Possibilities</p>
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-300 animate-blur-in-subtitle">{t('main.subtitle')}</p>
           </div>
           <div className="w-full mt-8">
             <DownloadButtons />
@@ -84,7 +90,7 @@ export function WaitlistSignup() {
             aria-label="X (formerly Twitter)"
             icon={<XIcon className="w-6 h-6" />}
           />
-          <p className="text-gray-400 text-sm">© 2025 TokenTalk</p>
+          <p className="text-gray-400 text-sm">{t('footer.copyright')}</p>
         </div>
       </div>
     </>

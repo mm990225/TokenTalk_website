@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
+import { LanguageProvider } from "./contexts/language-context"
 
 export const metadata: Metadata = {
   title: "TokenTalk - Redefining Web3 Social",
@@ -20,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen">{children}</body>
+      <body className="bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen">
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }

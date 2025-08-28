@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { useLanguage } from "../contexts/language-context"
 
 interface DownloadButtonProps {
   children: React.ReactNode
@@ -38,6 +39,8 @@ function DownloadButton({ children, href, onClick, disabled = false }: DownloadB
 }
 
 export function DownloadButtons() {
+  const { t } = useLanguage()
+  
   return (
     <div className="flex flex-row gap-4 w-full justify-center flex-wrap">
       <DownloadButton disabled={true}>
@@ -53,7 +56,7 @@ export function DownloadButtons() {
             console.log("[v0] App Store icon loaded successfully")
           }}
         />
-        <span>App Store</span>
+        <span>{t('download.appstore')}</span>
       </DownloadButton>
 
       <DownloadButton disabled={true}>
@@ -69,7 +72,7 @@ export function DownloadButtons() {
             console.log("[v0] Google Play icon loaded successfully")
           }}
         />
-        <span>Google Play</span>
+        <span>{t('download.googleplay')}</span>
       </DownloadButton>
 
       <DownloadButton disabled={false} href="https://data.tokentalk.cc/DOWNLOAD/android/tokentalk.apk">
@@ -85,7 +88,7 @@ export function DownloadButtons() {
             console.log("[v0] Android icon loaded successfully")
           }}
         />
-        <span>Android APK</span>
+        <span>{t('download.android')}</span>
       </DownloadButton>
     </div>
   )
