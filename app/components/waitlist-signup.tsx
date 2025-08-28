@@ -11,7 +11,7 @@ export function WaitlistSignup() {
         <img
           src="/tokentalk-logo.png"
           alt="TokenTalk Logo"
-          className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg object-contain"
+          className="w-7 h-7 sm:w-11 sm:h-11 rounded-lg object-contain"
           onError={(e) => {
             console.log("[v0] Logo failed to load:", e.currentTarget.src)
           }}
@@ -19,7 +19,7 @@ export function WaitlistSignup() {
             console.log("[v0] Logo loaded successfully")
           }}
         />
-        <span className="text-white font-medium text-lg sm:text-2xl">TokenTalk</span>
+        <span className="text-white font-medium text-base sm:text-xl">TokenTalk</span>
       </div>
 
       <div className="relative w-full max-w-xl mx-auto p-4 sm:p-8 flex flex-col justify-between min-h-screen">
